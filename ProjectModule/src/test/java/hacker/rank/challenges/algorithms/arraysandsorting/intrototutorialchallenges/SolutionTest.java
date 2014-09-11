@@ -1,5 +1,6 @@
-package hacker.rank.challenges.algorithms.arraysandstrings.intrototutorialchallenges;
+package hacker.rank.challenges.algorithms.arraysandsorting.intrototutorialchallenges;
 
+import hacker.rank.challenges.algorithms.arraysandsorting.intrototutorialchallenges.Solution;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
