@@ -13,7 +13,7 @@ public class SolutionTest {
             + "ABAB12345Y\n"
             + "avCDS1234Y";
 
-    assertEquals("YES\\nNO\\nNO\\n", new Solution.ValidPanFormat().solve(new Scanner(input)));
+    assertEquals("YES\nNO\nNO\n", new Solution.ValidPanFormat().solve(new Scanner(input)));
   }
 
 }
