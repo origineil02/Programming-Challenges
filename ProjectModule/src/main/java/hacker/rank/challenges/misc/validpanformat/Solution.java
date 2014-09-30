@@ -14,10 +14,8 @@ public class Solution {
       in.nextLine();
       for(int i = 0; i < testCases; ++i){
         final String pan = in.nextLine();
-        
         boolean flag = pan.length() == 10 && pan.matches("[A-Z]{5}[0-9]{4}[A-Z]{1}");
-        System.out.println(flag ? "YES" : "NO");
-        sb.append(flag ? "YES" : "NO").append("\\n");
+        sb.append(flag ? "YES" : "NO").append("\n");
       }
       return sb.toString();
     }
