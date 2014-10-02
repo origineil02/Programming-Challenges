@@ -1,5 +1,6 @@
 package hacker.rank.challenges.misc.validpanformat;
 
+import hacker.rank.challenges.misc.regex.validpanformat.Solution;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;

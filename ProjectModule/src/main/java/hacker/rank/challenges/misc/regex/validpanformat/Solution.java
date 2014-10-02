@@ -1,4 +1,4 @@
-package hacker.rank.challenges.misc.validpanformat;
+package hacker.rank.challenges.misc.regex.validpanformat;
 
 import java.util.Scanner;
 
