@@ -12,9 +12,14 @@ sort -n $1
 #    Sort the lines in descending order - such that the first line holds the (numerically) smallest number and the last line hold the (numerically) largest number. 
 sort -nr $1
 
-#5 : You are given a file of text,which contains temperature information about American cities, in TSV (tab-separated) format. The first column is the name of the city and the next four columns are the average temperature in the months of Jan, Feb, March and April.
+#5 : You are given a file of text,which contains temperature information about American cities, in TSV (tab-separated) format. 
 #    Rearrange the rows of the table in descending order of the values for the average temperature in January. 
+sort -rnk2 -t$'\t' $1
 
-#6 : You are given a file of tab separated weather data (TSV). There is no header column in this data file.
-#    The first five columns of this data are: (a) the name of the city (b) the average monthly temperature in Jan (in Fahreneit). (c) the average monthly temperature in April (in Fahreneit). (d) the average monthly temperature in July (in Fahreneit). (e) the average monthly temperature in October (in Fahreneit).
-#    Sort this file in ascending order of the second column (i.e. the average monthly temperature in January). 
+#6 : You are given a file of tab separated weather data (TSV).  
+#    Sort this file in ascending order of the second column (i.e.
+sort -nk2 -t$'\t' $1
+
+#7 : You are given a file of pipe-delimited weather data (TSV).
+#    Sort this file in descending order of the second column
+sort -rnk2 -t'|' $1
