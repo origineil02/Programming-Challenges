@@ -22,7 +22,7 @@ public class SolutionTest {
             + "(90., 180.)\n"
             + "(-090.00000, -180.0000)").split("\n");
 
-    final String[] output = ("Valid\n"
+    final String[] expected = ("Valid\n"
             + "Valid\n"
             + "Valid\n"
             + "Valid\n"
@@ -36,7 +36,7 @@ public class SolutionTest {
             + "Invalid").split("\n");
 
     for (int i = 0; i < testCases.length; ++i) {
-      assertEquals(testCases[i], output[i] + "\n", new Solution.LatitudeAndLongitude().solve(new Scanner("1\n" + testCases[i])));
+      assertEquals(testCases[i], expected[i] + "\n", new Solution.LatitudeAndLongitude().solve(new Scanner("1\n" + testCases[i])));
     }
   }
 
@@ -53,7 +53,7 @@ public class SolutionTest {
             + "(-14, -113)\n"
             + "(-14.19976, -113.19976)").split("\n");
 
-    final String[] output = ("Invalid\n"
+    final String[] expected = ("Invalid\n"
             + "Invalid\n"
             + "Invalid\n"
             + "Invalid\n"
@@ -65,7 +65,7 @@ public class SolutionTest {
             + "Valid").split("\n");
 
     for (int i = 0; i < testCases.length; ++i) {
-      assertEquals(testCases[i], output[i] + "\n", new Solution.LatitudeAndLongitude().solve(new Scanner("1\n" + testCases[i])));
+      assertEquals(testCases[i], expected[i] + "\n", new Solution.LatitudeAndLongitude().solve(new Scanner("1\n" + testCases[i])));
     }
   }
 
@@ -102,7 +102,7 @@ public class SolutionTest {
             + "(-147, -266)\n"
             + "(-147.357525, -266.357525)").split("\n");
 
-    final String[] output = ("Valid\n"
+    final String[] expected = ("Valid\n"
             + "Valid\n"
             + "Valid\n"
             + "Valid\n"
@@ -132,9 +132,77 @@ public class SolutionTest {
             + "Valid\n"
             + "Invalid\n"
             + "Invalid").split("\n");
-    
+
     for (int i = 0; i < testCases.length; ++i) {
-      assertEquals(testCases[i], output[i] + "\n", new Solution.LatitudeAndLongitude().solve(new Scanner("1\n" + testCases[i])));
+      assertEquals(testCases[i], expected[i] + "\n", new Solution.LatitudeAndLongitude().solve(new Scanner("1\n" + testCases[i])));
+    }
+  }
+
+  @Test
+  public void testSample4() {
+    final String[] testCases = ("(-24, -93)\n"
+            + "(-24.157721, -93.157721)\n"
+            + "(-79, -55)\n"
+            + "(-79.540667, -55.540667)\n"
+            + "(-116, -99)\n"
+            + "(-116.639280, -99.639280)\n"
+            + "(-122, -196)\n"
+            + "(-122.85186, -196.85186)\n"
+            + "(-67, -70)\n"
+            + "(-67.233682, -70.233682)\n"
+            + "(-64, -67)\n"
+            + "(-64.780557, -67.780557)\n"
+            + "(-65, -271)\n"
+            + "(-65.347042, -271.347042)\n"
+            + "(-32, -85)\n"
+            + "(-32.84880, -85.84880)\n"
+            + "(-110, -6)\n"
+            + "(-110.158590, -6.158590)\n"
+            + "(-130, -219)\n"
+            + "(-130.581178, -219.581178)\n"
+            + "(-88, -241)\n"
+            + "(-88.344600, -241.344600)\n"
+            + "(-6, -165)\n"
+            + "(-6.871826, -165.871826)\n"
+            + "(-98, -40)\n"
+            + "(-98.122626, -40.122626)\n"
+            + "(-6, -172)\n"
+            + "(-6.377934, -172.377934)\n"
+            + "(-147, -266)\n"
+            + "(-147.357525, -266.357525)").split("\n");
+
+    final String[] expected = ("Valid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Invalid\n"
+            + "Invalid\n"
+            + "Valid\n"
+            + "Valid\n"
+            + "Invalid\n"
+            + "Invalid").split("\n");
+    for (int i = 0; i < testCases.length; ++i) {
+      assertEquals(testCases[i], expected[i] + "\n", new Solution.LatitudeAndLongitude().solve(new Scanner("1\n" + testCases[i])));
     }
   }
 }
