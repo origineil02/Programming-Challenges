@@ -1,5 +1,7 @@
 package hacker.rank.challenges.misc.regex.alienusername;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
@@ -18,15 +20,27 @@ public class SolutionTest {
   
   @Test
   public void testCustomInput() {
-    final String[] userNames = (".12a_\n" 
-                              + ".a_"
-                              + ".1a_"
-                              + ".1"
-                              + "_1_").split("\n");
-
-    final String[] expected = ("VALID\nINVALID\nVALID\nVALID\nVALID").split("\n");
-    for(int i = 0; i < userNames.length; ++i){
-        assertEquals(expected[i], new Solution.AlienUsername().solve(new Scanner("1\n"+userNames[i])));
+    final Map<String, String> testCases = new HashMap<>();
+    testCases.put(".12a_", "VALID");
+    testCases.put("_12a_", "VALID");
+    testCases.put(".12a", "VALID");
+    testCases.put("_12a", "VALID");
+    testCases.put(".1a_", "VALID");
+    testCases.put(".1", "VALID");
+    testCases.put("_1", "VALID");
+    testCases.put(".1_", "VALID");
+    testCases.put("_1_", "VALID");
+    
+    testCases.put("1a_", "INVALID");
+    testCases.put("1a", "INVALID");
+    testCases.put("a", "INVALID");
+    testCases.put(".a", "INVALID");
+    testCases.put("_a", "INVALID");
+    testCases.put("_a_", "INVALID");
+    testCases.put(".a_", "INVALID");
+   
+    for (Map.Entry<String, String> entry : testCases.entrySet()) {
+        assertEquals(entry.getKey(), entry.getValue(), new Solution.AlienUsername().solve(new Scanner("1\n"+entry.getKey())));
     }
   }
 }
