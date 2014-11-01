@@ -26,12 +26,18 @@ public class SolutionTest {
     testCases.put(".12a", "VALID");
     testCases.put("_12a", "VALID");
     testCases.put(".1a_", "VALID");
+    testCases.put(".1Z_", "VALID");
+    testCases.put(".1Z", "VALID");
+    testCases.put("_1Z_", "VALID");
+    testCases.put("_1Z", "VALID");
     testCases.put(".1", "VALID");
     testCases.put("_1", "VALID");
     testCases.put(".1_", "VALID");
     testCases.put("_1_", "VALID");
     
     testCases.put("1a_", "INVALID");
+    testCases.put("1Z_", "INVALID");
+    testCases.put("1Z", "INVALID");
     testCases.put("1a", "INVALID");
     testCases.put("a", "INVALID");
     testCases.put(".a", "INVALID");
