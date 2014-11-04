@@ -35,7 +35,7 @@ public class SolutionTest {
     testCases.put(".1_", "VALID");
     testCases.put("_1_", "VALID");
     
-    testCases.put("", "INVALID");
+    testCases.put("\n", "INVALID");
     testCases.put(".", "INVALID");
     testCases.put("_", "INVALID");
     testCases.put("__", "INVALID");
