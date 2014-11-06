@@ -21,9 +21,9 @@ public class Problem112 {
       return !(increasing || decreasing);
     }
 
-    public String solve() {
-      Integer value = 21781;
-      int bouncy = 19602;
+    public String solve(int targetPercentage) {
+      Integer value = 100;
+      int bouncy = 0;
 
       while (true) {
         if (isBouncy(value)) {
@@ -31,7 +31,7 @@ public class Problem112 {
 
           int percentange = bouncy * 100 / value;
           //System.out.println(value + " : " + percentange);
-          if (99 == percentange) {
+          if (targetPercentage == percentange) {
             break;
           }
         }
@@ -43,7 +43,7 @@ public class Problem112 {
 
     @Override
     public void run() {
-      solve();
+      solve(99);
     }
   }
 
