@@ -3,12 +3,7 @@ package hacker.rank.challenges.algorithms.arraysandsorting.quicksort.sorting;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.fail;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class SolutionTest {
   
@@ -185,5 +180,4 @@ public class SolutionTest {
             + "10 12 17 20 22 30 31 35 39 46 48 52 54 61 64 65 68 69 74 79 86 88 90 95 97 99 103 108 117 120 121 128 136 139 141 142 143 149 150 157 160 162 171 172 177 183 184 187 196 200 204 209 220 222 226 233 234 238 239 252 263 266 270 273 275 288 293 312 316 317 318 321 323 331 356 359 364 390 392 398 406 415 418 421 422 440 441 443 444 448 450 452 467 472 481 483 488 493 496 497\n";
     validate(new Scanner(actual), new Scanner(output));
   }
-  
 }
