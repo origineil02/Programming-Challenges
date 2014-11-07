@@ -13,5 +13,4 @@ public class SolutionTest {
 
     assertEquals("140", new Solution.GameOfRotation().solve(new Scanner(input)));
   }
-
 }

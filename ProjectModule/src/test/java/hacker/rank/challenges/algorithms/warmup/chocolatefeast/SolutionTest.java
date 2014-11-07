@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.warmup.chocolatefeast;
 
-import hacker.rank.challenges.algorithms.warmup.chocolatefeast.Solution;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;

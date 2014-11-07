@@ -1044,5 +1044,4 @@ public class SolutionTest {
     final String actual = new Solution.FullCountingSort().solve(new Scanner(input));
     assertEquals(output, actual);
   }
-
 }

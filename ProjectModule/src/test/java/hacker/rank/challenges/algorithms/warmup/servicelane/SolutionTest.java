@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.warmup.servicelane;
 
-import hacker.rank.challenges.algorithms.warmup.servicelane.Solution;
 import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;

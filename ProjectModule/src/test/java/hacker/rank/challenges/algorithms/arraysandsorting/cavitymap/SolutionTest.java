@@ -18,5 +18,4 @@ public class SolutionTest {
     final String output = "1112\n1X12\n18X2\n1234\n";
     assertEquals(output, new CavityMap().solve(new Scanner(input)));
   }
-
 }

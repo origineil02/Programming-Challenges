@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.warmup.gameofthrones;
 
-import hacker.rank.challenges.algorithms.warmup.gameofthrones.Solution;
 import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;
