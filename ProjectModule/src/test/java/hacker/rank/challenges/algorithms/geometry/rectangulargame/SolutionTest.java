@@ -15,5 +15,4 @@ public class SolutionTest {
 
     assertEquals("2", new Solution.RectangularGame().solve(new Scanner(input)));
   }
-
 }

@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.warmup.sherlockandthebeast;
 
-import hacker.rank.challenges.algorithms.warmup.sherlockandthebeast.Solution;
 import java.util.Scanner;
 import junit.framework.Assert;
 import org.junit.Test;

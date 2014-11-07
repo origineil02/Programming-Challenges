@@ -27,5 +27,4 @@ public class SolutionTest {
             + "9999900000\n"
             + "9999900000\n", new Solution.SherlockAndPairs().solve(new Scanner(input)));
   }
-
 }

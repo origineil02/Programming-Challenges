@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.warmup.halloweenparty;
 
-import hacker.rank.challenges.algorithms.warmup.halloweenparty.Solution;
 import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;

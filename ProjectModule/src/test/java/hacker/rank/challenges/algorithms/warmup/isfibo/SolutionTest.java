@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.warmup.isfibo;
 
-import hacker.rank.challenges.algorithms.warmup.isfibo.Solution;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;

@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.warmup.fillingjars;
 
-import hacker.rank.challenges.algorithms.warmup.fillingjars.Solution;
 import java.util.Scanner;
 import junit.framework.Assert;
 import org.junit.Test;
