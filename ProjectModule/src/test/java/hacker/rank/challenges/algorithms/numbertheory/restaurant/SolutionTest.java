@@ -9,6 +9,35 @@ public class SolutionTest extends TestCase {
     assertEquals("1\n6", new Solution.Restaurant().solve(new Scanner("2\n2 2\n6 9")));
   }
 
+  public void testCase0() {
+    final String input = "11\n"
+            + "38 751\n"
+            + "344 734\n"
+            + "165 635\n"
+            + "297 667\n"
+            + "917 264\n"
+            + "544 642\n"
+            + "254 914\n"
+            + "612 50\n"
+            + "94 707\n"
+            + "564 417\n"
+            + "145 246";
+
+    final String output = "28538\n"
+            + "63124\n"
+            + "4191\n"
+            + "198099\n"
+            + "242088\n"
+            + "87312\n"
+            + "58039\n"
+            + "7650\n"
+            + "66458\n"
+            + "26132\n"
+            + "35670";
+
+    assertEquals(output, new Solution.Restaurant().solve(new Scanner(input)));
+  }
+
   public void testCase1() {
     final String input = "25\n"
             + "309 528\n"
