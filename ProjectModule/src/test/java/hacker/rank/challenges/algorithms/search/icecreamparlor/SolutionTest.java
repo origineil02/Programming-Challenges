@@ -17,6 +17,5 @@ public class SolutionTest {
             + "2 2 4 3";
 
     assertEquals("1 4\n1 2\n", new Solution.IceCreamParlor().solve(new Scanner(input)));
-
   }
 }

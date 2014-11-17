@@ -1,7 +1,5 @@
 package hacker.rank.challenges.algorithms.search.flowers;
 
-
-
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -10,10 +8,6 @@ public class Solution {
   
   public static class Flowers implements Runnable {
 
-    private class Container {
-      Integer count;
-      
-    }
     public String solve(final Scanner in) {
       int N = in.nextInt();
       int K = in.nextInt();
