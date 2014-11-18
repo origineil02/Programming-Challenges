@@ -17,5 +17,4 @@ public class SolutionTest {
 
     assertEquals("Hi Alex how are you doing\n", new Solution.SayingHi().solve(new Scanner(input)));
   }
-
 }

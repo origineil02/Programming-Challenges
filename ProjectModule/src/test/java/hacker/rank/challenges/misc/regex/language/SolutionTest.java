@@ -13,7 +13,6 @@ public class SolutionTest extends TestCase {
             + "11044 X";
 
     assertEquals("VALID\nVALID\nINVALID\n", new Solution.HackerRankLanguage().solve(new Scanner(input)));
-
   }
 
   public void testProblemStatement() {

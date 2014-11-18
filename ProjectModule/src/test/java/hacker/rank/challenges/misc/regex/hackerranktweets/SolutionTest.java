@@ -16,5 +16,4 @@ public class SolutionTest {
 
     assertEquals("4", new Solution.HackerRankTweets().solve(new Scanner(input)));
   }
-
 }
