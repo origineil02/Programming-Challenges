@@ -3,7 +3,6 @@ package hacker.rank.challenges.misc.regex.findhackerrank;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class SolutionTest {
 
@@ -17,5 +16,4 @@ public class SolutionTest {
 
     assertEquals("2\n1\n0\n-1\n", new Solution.FindHackerRank().solve(new Scanner(input)));
   }
-
 }

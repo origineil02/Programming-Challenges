@@ -16,5 +16,4 @@ public class SolutionTest {
 
     assertEquals("YES\nNO\nNO\n", new Solution.ValidPanFormat().solve(new Scanner(input)));
   }
-
 }
