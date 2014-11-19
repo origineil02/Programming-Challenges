@@ -16,7 +16,7 @@ public class SolutionTest {
     Assert.assertEquals("2", new GemStones().solve(new Scanner(input)));
   }
 
-   @Test
+  @Test
   public void testNothing() {
     final String input = "3\n"
             + "a\n"

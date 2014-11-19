@@ -15,7 +15,6 @@ public class SolutionTest {
   @Test
   public void testUpperConstraint() {
     final String input = "1 " + String.valueOf((int)Math.pow(10, 7));
-    System.out.println(input);
     
     String actualOutput = new Solution.HalloweenParty().solve(new Scanner(input));
     actualOutput = actualOutput.replace("\n", "");
