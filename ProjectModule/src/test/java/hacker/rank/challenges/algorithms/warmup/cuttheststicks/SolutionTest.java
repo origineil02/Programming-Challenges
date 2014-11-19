@@ -14,7 +14,7 @@ public class SolutionTest {
     assertEquals("6\n4\n2\n1\n", new Solution.CutTheSticks().solve(new Scanner(input)));
   }
   
-   @Test
+  @Test
   public void testSample2() {
 
     final String input = "8\n1 2 3 4 3 3 2 1";

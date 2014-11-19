@@ -11,7 +11,7 @@ public class SolutionTest {
     assertEquals("15", new Solution.MaximizingXOR().solve(new Scanner("10\n5\n")));
   }
   
-   @Test
+  @Test
   public void testSampleReversed() {
     assertEquals("15", new Solution.MaximizingXOR().solve(new Scanner("5\n10\n")));
   }
