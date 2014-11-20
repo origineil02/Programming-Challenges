@@ -28,16 +28,15 @@ public class Solution {
         int cut = data.keySet().iterator().next();
         int tokens = data.get(cut).size();
         sb.append(sticks).append("\n");
-        System.out.println(sticks);
         sticks -= tokens;
         data.remove(cut);
       }
-      return sb.toString();
+      return sb.toString().trim();
     }
     
     @Override
     public void run() {
-      solve(new Scanner(System.in));
+      System.out.println(solve(new Scanner(System.in)));
     }
   }
   
