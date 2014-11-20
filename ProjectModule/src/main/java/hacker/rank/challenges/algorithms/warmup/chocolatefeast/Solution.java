@@ -12,10 +12,9 @@ public class Solution {
       for(int i = in.nextInt(); i > 0; --i){
         int initialPurchase = in.nextInt() / in.nextInt();
         int total = exchange(initialPurchase, in.nextInt(), initialPurchase);
-        System.out.println(total);
         sb.append(total).append("\n");
       }
-      return sb.toString();
+      return sb.toString().trim();
     }
     
     private int exchange(int wrappers, int discount, int total){
@@ -29,7 +28,7 @@ public class Solution {
     
     @Override
     public void run() {
-      solve(new Scanner(System.in));
+      System.out.println(solve(new Scanner(System.in)));
     }
   }
   
