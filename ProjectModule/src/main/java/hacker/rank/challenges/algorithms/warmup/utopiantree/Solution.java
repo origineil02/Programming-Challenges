@@ -18,17 +18,15 @@ public class Solution {
         for(int cycle = 1; cycle <= growthCycles; ++cycle){
             height += (0 != cycle%2 ? height : 1);
         }
-        System.out.println(height);
-        sb.append(height)
-          .append("\n");
+        sb.append(height).append("\n");
       }
       
-      return sb.toString();
+      return sb.toString().trim();
     }
     
     @Override
     public void run() {
-      solve(new Scanner(System.in));
+      System.out.println(solve(new Scanner(System.in)));
     }
   }
 
