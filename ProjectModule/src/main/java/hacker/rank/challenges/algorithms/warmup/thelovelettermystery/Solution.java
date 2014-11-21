@@ -24,7 +24,6 @@ public class Solution {
           
           sum += Math.max(f, b) - Math.min(f, b);
         }
-        System.out.println(sum);
         sb.append(sum).append("\n");
       }
       
@@ -33,7 +32,7 @@ public class Solution {
     
     @Override
     public void run() {
-      solve(new Scanner(System.in));
+      System.out.println(solve(new Scanner(System.in)));
     }
   }
   
