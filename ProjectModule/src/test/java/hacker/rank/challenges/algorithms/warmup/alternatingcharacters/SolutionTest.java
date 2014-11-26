@@ -15,10 +15,4 @@ public class SolutionTest extends TestCase {
             + "AAABBB";
     Assert.assertEquals("3\n4\n0\n0\n4", new Solution.AlternatingCharacters().solve(new Scanner(input)));
   }
-
-    public void test() {
-    final String input = "1\n"
-            + "AAABBB";
-    Assert.assertEquals("4", new Solution.AlternatingCharacters().solve(new Scanner(input)));
-  }
 }
