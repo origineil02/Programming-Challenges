@@ -1,6 +1,6 @@
-package hacker.rank.challenges.algorithms.warmup.sherlockandsquares;
+package attempt.hacker.rank.challenges.algorithms.warmup.sherlockandsquares;
 
-import hacker.rank.attempt.Solution;
+import attempt.hacker.rank.algorithms.warmup.sherlockandsquares.Solution;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
