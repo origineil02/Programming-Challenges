@@ -8,7 +8,13 @@ public class Solution {
 
     public String solve(final Scanner in) {
       
-      return "";
+      final StringBuilder sb = new StringBuilder();
+      int testCases = Integer.parseInt(in.nextLine());
+      while(0<testCases--){
+        in.nextLine();
+        char[] line = in.nextLine().toCharArray();
+      }
+      return sb.toString().trim();
     }
     
     @Override
