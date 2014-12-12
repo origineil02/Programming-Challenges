@@ -1,4 +1,4 @@
-package attempt.hacker.rank.algorithms.combinatronics.buildingalist;
+package hacker.rank.algorithms.combinatronics.buildingalist;
 
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
@@ -11,6 +11,11 @@ public class SolutionTest extends TestCase {
     assertEquals("a\nab\nabc\nac\nb\nbc\nc", new Solution.BuildingAList().solve(new Scanner(input)));
   }
   
+  public void testProblemStatementReversed(){
+    final String input = "1\n3\ncba";
+    assertEquals("a\nab\nabc\nac\nb\nbc\nc", new Solution.BuildingAList().solve(new Scanner(input)));
+  }
+   
   public void testSample() {
     final String input = "2\n2\nab\n3\nxyz";
     assertEquals("a\nab\nb\nx\nxy\nxyz\nxz\ny\nyz\nz", new Solution.BuildingAList().solve(new Scanner(input)));
