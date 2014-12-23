@@ -1,5 +1,6 @@
-package hacker.rank.algorithms.combinatronics.buildingalist;
+package hacker.rank.challenges.algorithms.combinatronics.buildingalist;
 
+import hacker.rank.challenges.algorithms.combinatronics.buildingalist.Solution;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import junit.framework.TestCase;

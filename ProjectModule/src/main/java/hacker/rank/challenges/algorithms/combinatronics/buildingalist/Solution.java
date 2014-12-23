@@ -1,4 +1,4 @@
-package hacker.rank.algorithms.combinatronics.buildingalist;
+package hacker.rank.challenges.algorithms.combinatronics.buildingalist;
 
 import java.util.Arrays;
 import java.util.Scanner;
