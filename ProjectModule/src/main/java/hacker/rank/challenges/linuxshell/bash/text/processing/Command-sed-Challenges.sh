@@ -5,3 +5,4 @@ sed s/"\bthe\b"/this/ $1
 sed s/[tT]hy/your/g  $1
 
 #3 - highlight all the occurrences of 'thy' by wrapping them up in brace brackets. The search should be case-insensitive.
+sed s/thy/{\&}/g $1
