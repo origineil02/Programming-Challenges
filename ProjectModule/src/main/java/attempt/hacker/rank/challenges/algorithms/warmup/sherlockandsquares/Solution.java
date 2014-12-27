@@ -1,4 +1,4 @@
-package attempt.hacker.rank.algorithms.warmup.sherlockandsquares;
+package attempt.hacker.rank.challenges.algorithms.warmup.sherlockandsquares;
 
 import java.util.Scanner;
 import java.util.Set;
