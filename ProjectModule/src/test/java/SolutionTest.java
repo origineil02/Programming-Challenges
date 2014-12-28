@@ -8,7 +8,7 @@ public class SolutionTest {
   public void testSample() {
 
     final String input = "";
-    
+
     assertEquals("", new Solution.ClassName().solve(new Scanner(input)));
   }
 }
