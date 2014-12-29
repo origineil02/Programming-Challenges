@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.warmup.datastructures.quiz1;
+package hacker.rank.challenges.quiz.one;
 
 import java.util.Scanner;
 
