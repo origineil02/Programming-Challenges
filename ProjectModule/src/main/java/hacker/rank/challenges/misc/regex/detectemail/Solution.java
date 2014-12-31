@@ -19,18 +19,18 @@ public class Solution {
             parse(token, emails);
           }
           else{
-          if (token.contains("@")) {
+            if (token.contains("@")) {
             //System.out.println(token);
-            if (token.matches("[_a-zA-Z0-9\\.]+@[a-zA-Z0-9\\.]+\\.(com|in|org)[^\\s]?")) {
-              final String[] tokens = token.split("@");
-              String address = tokens[0]+ "@";
+              if (token.matches("[_a-zA-Z0-9\\.]+@[a-zA-Z0-9\\.]+\\.(com|in|org)[^\\s]?")) {
+                final String[] tokens = token.split("@");
+                String address = tokens[0]+ "@";
               
-              final String end = String.valueOf(tokens[1].charAt(tokens[1].length()-1));
-              address += punctuations.contains(end) ? tokens[1].substring(0, tokens[1].length()-1) : tokens[1];
+                final String end = String.valueOf(tokens[1].charAt(tokens[1].length()-1));
+                address += punctuations.contains(end) ? tokens[1].substring(0, tokens[1].length()-1) : tokens[1];
               
-              emails.add(address);
+                emails.add(address);
+              }
             }
-          }
           }
         }
     }
