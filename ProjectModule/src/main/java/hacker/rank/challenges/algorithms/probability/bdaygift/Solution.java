@@ -20,7 +20,8 @@ public class Solution {
       while(0<testCases--){
         value += in.nextInt() * .5;
       }
-      return new BigDecimal(value).setScale(1).toString();
+      
+      return String.format("%.1f", value);
     }
     
     @Override
