@@ -1,8 +1,5 @@
 package hacker.rank.challenges.algorithms.probability.bdaygift;
 
-import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Solution {
@@ -11,9 +8,6 @@ public class Solution {
 
     public String solve(final Scanner in) {
       
-      final Map<Integer, Integer> map = new HashMap<>();
-      
-      final StringBuilder sb = new StringBuilder();
       int testCases = Integer.parseInt(in.nextLine());
       Double value = 0.0;
       
