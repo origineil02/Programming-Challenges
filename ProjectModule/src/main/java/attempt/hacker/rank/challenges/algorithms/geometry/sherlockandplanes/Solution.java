@@ -6,28 +6,30 @@ public class Solution {
   
   public static class SherlockAndPlanes implements Runnable {
 
+    private boolean checkPlane(int plane, String[][] coordinates){
+      String axis = "";
+      for (String[] str : coordinates) {
+        axis = str[plane];
+      }
+      
+     return axis.replace(""+axis.charAt(0), "").length() == 0;
+    }
+    
     public String solve(final Scanner in) {
       
       int testCases = Integer.parseInt(in.nextLine());
-      boolean samePlane = false;
-      
-      String[][] coordinates = new String[4][];
+      final StringBuilder sb = new StringBuilder();
+      final String[][] coordinates = new String[4][];
       while(0 < testCases--){
         for(int i = 0; i < 4; i++){
           coordinates[i] = in.nextLine().split(" ");
         }
+        
+        boolean matchingAxis = checkPlane(0, coordinates) || checkPlane(1, coordinates) || checkPlane(2, coordinates);
+        sb.append(matchingAxis ? "YES" : "NO").append("\n");
       }
       
-      String zAxis = "";
-      for (String[] str : coordinates) {
-        zAxis = str[2];
-      }
-      
-      if(zAxis.replace(""+zAxis.charAt(0), "").length() == 0){
-        samePlane = true;
-      }
-      
-      return samePlane ? "YES" : "NO";
+      return sb.toString().trim();
     }
     
     @Override
