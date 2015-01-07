@@ -17,7 +17,6 @@ public class Solution {
       final Map<Integer, List<Integer>> data = new HashMap<>();
       int length = in.nextInt();
       
-      
       for (int i = 0; i < length; i++) {
         Integer key = in.nextInt();
         
