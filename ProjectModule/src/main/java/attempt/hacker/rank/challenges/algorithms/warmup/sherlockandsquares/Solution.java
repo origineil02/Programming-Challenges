@@ -13,6 +13,7 @@ public class Solution {
         test(i*i, bound, repo);
       }
     }
+    
     public String solve(final Scanner in) {
       
       final StringBuilder sb = new StringBuilder();
