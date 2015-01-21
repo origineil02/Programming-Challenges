@@ -11,7 +11,7 @@ public class Solution {
     
     @Override
     public void run() {
-      solve(new Scanner(System.in));
+      System.out.println(solve(new Scanner(System.in)));
     }
   }
   
