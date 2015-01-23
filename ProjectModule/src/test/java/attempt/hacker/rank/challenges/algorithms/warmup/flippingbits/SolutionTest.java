@@ -12,4 +12,8 @@ public class SolutionTest extends TestCase {
     assertEquals("2147483648\n4294967294\n4294967295", new Solution.FlippingBits().solve(new Scanner(input)));
   }
   
+  public void testCase1(){
+    final String input = "1\n4294967295";
+    assertEquals("0", new Solution.FlippingBits().solve(new Scanner(input)));
+  }
 }

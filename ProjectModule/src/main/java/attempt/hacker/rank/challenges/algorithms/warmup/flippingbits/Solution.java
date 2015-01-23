@@ -11,9 +11,9 @@ public class Solution {
       final StringBuilder sb = new StringBuilder();
       int testCases = in.nextInt();
       while(0 < testCases--){
-        int number = in.nextInt();
-        
-         sb.append(number ^ ~0).append("\n");
+        final long number = in.nextLong();
+        String binary = Long.toBinaryString(~number);
+        sb.append(Long.parseLong(binary.substring(binary.length()-32), 2)).append("\n");
       }
       return sb.toString().trim();
     }
