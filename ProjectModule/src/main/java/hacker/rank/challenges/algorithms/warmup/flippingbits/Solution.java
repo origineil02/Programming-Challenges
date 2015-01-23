@@ -1,4 +1,4 @@
-package attempt.hacker.rank.challenges.algorithms.warmup.flippingbits;
+package hacker.rank.challenges.algorithms.warmup.flippingbits;
 
 import java.util.Scanner;
 

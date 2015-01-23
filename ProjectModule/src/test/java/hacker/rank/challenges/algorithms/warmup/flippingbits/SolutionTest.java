@@ -1,6 +1,5 @@
-package attempt.hacker.rank.challenges.algorithms.warmup.flippingbits;
+package hacker.rank.challenges.algorithms.warmup.flippingbits;
 
-import attempt.hacker.rank.challenges.algorithms.warmup.flippingbits.Solution;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import junit.framework.TestCase;
