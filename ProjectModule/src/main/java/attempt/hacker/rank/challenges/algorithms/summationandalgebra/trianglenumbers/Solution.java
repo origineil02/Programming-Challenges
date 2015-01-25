@@ -4,7 +4,14 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Solution {
+  /*
   
+        1  3  6  7
+      1 4  10 16
+    1 5 15 30
+  1 6 21
+1 7 28 
+  */
   public static class TriangleNumbers implements Runnable {
 
     private int getData(int target){
@@ -18,7 +25,7 @@ public class Solution {
       final LinkedList<Integer> previous = new LinkedList();
       previous.add(0);
       previous.add(1);
-      previous.add(target-2);
+      previous.add(target-2); //wrong
       
       int length = target%2==0 ? target+1 : target;
        
