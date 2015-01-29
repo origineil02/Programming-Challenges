@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.cavitymap;
+package hacker.rank.challenges.algorithms.implementation.cavitymap;
 
 import java.util.Scanner;
 
