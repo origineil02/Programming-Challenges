@@ -1,13 +1,11 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.cavitymap;
+package hacker.rank.challenges.algorithms.implementation.cavitymap;
 
-import hacker.rank.challenges.algorithms.arraysandsorting.cavitymap.Solution.CavityMap;
+import hacker.rank.challenges.algorithms.implementation.cavitymap.Solution.CavityMap;
 import java.util.Scanner;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import junit.framework.TestCase;
 
-public class SolutionTest {
+public class SolutionTest extends TestCase{
 
-  @Test
   public void testSample() {
     final String input = "4\n"
             + "1112\n"
