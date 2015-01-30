@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.sherlockandarray;
+package hacker.rank.challenges.algorithms.implementation.sherlockandarray;
 
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;

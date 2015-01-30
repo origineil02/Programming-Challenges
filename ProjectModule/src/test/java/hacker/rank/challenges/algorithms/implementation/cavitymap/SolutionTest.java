@@ -1,6 +1,5 @@
 package hacker.rank.challenges.algorithms.implementation.cavitymap;
 
-import hacker.rank.challenges.algorithms.implementation.cavitymap.Solution.CavityMap;
 import java.util.Scanner;
 import junit.framework.TestCase;
 
@@ -14,6 +13,6 @@ public class SolutionTest extends TestCase{
             + "1234";
 
     final String output = "1112\n1X12\n18X2\n1234\n";
-    assertEquals(output, new CavityMap().solve(new Scanner(input)));
+    assertEquals(output, new Solution.CavityMap().solve(new Scanner(input)));
   }
 }
