@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.warmup.cuttheststicks;
+package hacker.rank.challenges.algorithms.implementation.cuttheststicks;
 
 import java.util.ArrayList;
 import java.util.List;
