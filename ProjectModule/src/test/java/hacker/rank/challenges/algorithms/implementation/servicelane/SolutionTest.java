@@ -1,12 +1,10 @@
-package hacker.rank.challenges.algorithms.warmup.servicelane;
+package hacker.rank.challenges.algorithms.implementation.servicelane;
 
 import java.util.Scanner;
-import org.junit.Assert;
-import org.junit.Test;
+import junit.framework.TestCase;
 
-public class SolutionTest {
+public class SolutionTest extends TestCase{
 
-  @Test
   public void testSample() {
     String input = "8 5\n"
             + "2 3 1 2 3 2 3 3\n"
@@ -22,6 +20,6 @@ public class SolutionTest {
             + "2\n"
             + "1\n";
     
-    Assert.assertEquals(expected, new Solution.ServiceLane().solve(new Scanner(input)));
+    assertEquals(expected, new Solution.ServiceLane().solve(new Scanner(input)));
   }
 }
