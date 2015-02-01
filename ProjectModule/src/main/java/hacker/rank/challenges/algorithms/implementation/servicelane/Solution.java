@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.warmup.servicelane;
+package hacker.rank.challenges.algorithms.implementation.servicelane;
 
 import java.util.Scanner;
 
