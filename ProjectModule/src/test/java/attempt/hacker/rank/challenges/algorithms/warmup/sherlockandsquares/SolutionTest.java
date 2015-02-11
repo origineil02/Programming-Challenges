@@ -9,7 +9,7 @@ public class SolutionTest extends TestCase{
 
     final String input = "2\n3 9\n17 24";
     
-    assertEquals("2\n0\n", new Solution.SherlockAndSquares().solve(new Scanner(input)));
+    assertEquals("2\n0", new Solution.SherlockAndSquares().solve(new Scanner(input)));
   }
   
   /*
