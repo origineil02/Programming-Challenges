@@ -29,9 +29,9 @@ public class Solution {
       return false;
     }
     
-    private String getDimensions(int N, int S, int E, int W, List<String> field){
+    private int getDimensions(int N, int S, int E, int W, List<String> field){
       
-      if(N >= S || E >= W){return "impossible";}
+      if(N >= S || E >= W){return 0;}
       
       if(isObstructed(E, field.subList(N+1, S+1))){
         return getDimensions(N, S, E+1, W, field);
@@ -42,14 +42,14 @@ public class Solution {
       }
       
        if(isObstructed(E, W, field.get(N))){
-        return getDimensions(N+1, S, 0, width-1, field);
+        return Math.max(getDimensions(N+1, S, 0, width-1, field), getDimensions(N, S, E+1, W, field));
       }
       
       if(isObstructed(E, W, field.get(S))){
-        return getDimensions(N, S-1, 0, width-1, field);
+        return Math.max(getDimensions(0, S-1, 0, width-1, field), getDimensions(N, S-1, 0, W, field));
       }
       
-      return String.valueOf(2 * (W - E) +  2 * (S - N));
+      return 2 * (W - E) +  2 * (S - N);
     }
     
     public String solve(final Scanner in) {
@@ -63,7 +63,8 @@ public class Solution {
         field.add(in.nextLine());
       }
       
-      return getDimensions(0, height-1, 0, width-1, field);
+      final Integer result = getDimensions(0, height-1, 0, width-1, field);
+      return  result == 0 ? "impossible" : result.toString();
     }
     
     @Override

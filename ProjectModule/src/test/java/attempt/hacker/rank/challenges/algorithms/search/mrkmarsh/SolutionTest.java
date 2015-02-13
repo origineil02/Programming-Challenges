@@ -40,4 +40,14 @@ public class SolutionTest extends TestCase {
 
     assertEquals("4", new Solution.MrKMarsh().solve(new Scanner(input)));
   }
+  
+  public void testCustom2() {
+    final String input = "4 5\n"
+            + ".x...\n"
+            + "x.x..\n"
+            + "x.x..\n"
+            + "....x";
+
+    assertEquals("6", new Solution.MrKMarsh().solve(new Scanner(input)));
+  }
 }
