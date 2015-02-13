@@ -30,4 +30,14 @@ public class SolutionTest extends TestCase {
 
     assertEquals("impossible", new Solution.MrKMarsh().solve(new Scanner(input)));
   }
+  
+  public void testCustom() {
+    final String input = "4 5\n"
+            + ".x...\n"
+            + "x.x.x\n"
+            + "x.x..\n"
+            + ".....";
+
+    assertEquals("4", new Solution.MrKMarsh().solve(new Scanner(input)));
+  }
 }
