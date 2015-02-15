@@ -8,12 +8,8 @@ import junit.framework.TestCase;
 public class SolutionTest extends TestCase{
 
   public void testSample() {
-
-    final String input = "2\n3 9\n17 24";
-    
-    assertEquals("2\n0", new Solution.SherlockAndSquares().solve(new Scanner(input)));
+    assertEquals("2\n0", new Solution.SherlockAndSquares().solve(new Scanner("2\n3 9\n17 24")));
   }
-  
   
   public void testConstraints(){
     assertEquals("1",  new Solution.SherlockAndSquares().solve(new Scanner("1\n 1 1")));
