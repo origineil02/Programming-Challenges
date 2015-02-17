@@ -51,7 +51,13 @@ public class SolutionTest extends TestCase {
     assertEquals("6", new Solution.MrKMarsh().solve(new Scanner(input)));
   }
   
-  public void testFieldBuilder() {
-    assertEquals("[[.]]", new Solution.MrKMarsh().solve(new Scanner("1 1\n.")));
+    public void testCustom3() {
+    final String input = "4 5\n"
+            + ".x...\n"
+            + "x..x.\n"
+            + "x...x\n"
+            + ".x..x";
+
+    assertEquals("4", new Solution.MrKMarsh().solve(new Scanner(input)));
   }
 }
