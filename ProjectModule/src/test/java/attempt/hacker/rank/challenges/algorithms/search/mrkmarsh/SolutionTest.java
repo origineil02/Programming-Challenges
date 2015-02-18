@@ -78,6 +78,6 @@ public class SolutionTest extends TestCase {
             + "....x\n"
             + ".x..x";
 
-    assertEquals("9", new Solution.MrKMarsh().solve(new Scanner(input)));
+    assertEquals("8", new Solution.MrKMarsh().solve(new Scanner(input)));
   }
 }
