@@ -8,7 +8,18 @@ public class Solution {
 
   public static class MrKMarsh implements Runnable {
 
-         //  return 2 * (W - E) + 2 * (S - N);
+    //  return 2 * (W - E) + 2 * (S - N);
+    private class Dimension {
+
+      final int width;
+      final int height;
+
+      Dimension(int h, int w) {
+        this.width = w;
+        this.height = h;
+      }
+    }
+
     private class ResultContainer {
 
       private int result = -1;
@@ -18,85 +29,104 @@ public class Solution {
       }
     }
 
-    private List<String> sublistHead(List<String> l){
-      final List<String> n = new ArrayList<>(l);
-      n.remove(0);
-      return n;
-    }
-    
-    private String handle(int pos, int index, List<String> field) {
-      String str = index == 0 ? field.remove(pos) : field.remove(pos).substring(index);
-      return str;
-    }
-
-    private boolean hasEdgeError(int index, int w, List<String> field){
-      if(field.isEmpty()){return false;}
+    private String getScopedData(int index, int width, final String data){
       
-      for (String tmp : field) {
-        String str = tmp.substring(index);
-        if(str.charAt(0) == 'x' || str.charAt(w-1) == 'x'){
-          log("edge error");
-          return true;
-        }
-                
+      if(index == 0 && width == data.length()-1){
+        return data;
       }
-      return false;
+      
+      final StringBuilder sb = new StringBuilder();
+        for (int j = index, k = 0; k < width; ++j, ++k) {
+          sb.append(data.charAt(j));
+        }
+        return  sb.toString();
     }
     
-    private void process(int index, int w, List<String> field, final ResultContainer rc) {
-      
-      if(field.size() < 2 || w < 2){return;}
-      
-      final List<String> n = new ArrayList<>(field);
-      String first = handle(0, index, n);
-      String last = handle(n.size() - 1, index, n);
+    private void process(Dimension d, int row, int index, List<String> field, final ResultContainer rc) {
 
-      //log("rows: " + field.size());
-
-      if(first.length() < 2){return;}
-      
-      log("Process f: " + index + " " + w + " within " + first);
-      log("Process l: " + index + " " + w + " within " + last);
-      
-//      log(first.substring(0, w));
-//      for (String str : n) {
-//        String tmp = str.substring(index);
-//        log(tmp.charAt(0) + " " + tmp.charAt(w-1));
-//      }
-//      log(last.substring(0, w));
-      
-      if (first.substring(0, w).contains("x") || last.substring(0, w).contains("x")
-              || hasEdgeError(index, w, n)) {
-        process(index+1, first.length()-1, field, rc);
-        process(index, w-1, field, rc);
-        if(field.size() > 2){
-          process(index, w, sublistHead(field), rc);
-          process(index, w, field.subList(0, field.size()-1), rc);
-        }
+      if (d.height < 2 || d.width < 2) {
         return;
       }
+      
+      if(rc.result > 0){
+        int potential = 2 * (d.width - 1) + 2 * (d.height - 1);
+        if(potential < rc.result){
+          return;
+        }
+      }
 
+      final List<String> rows = new ArrayList<>();
+      for (int i = row, j = 0; j < d.height; i++, j++) {
+        rows.add(field.get(i));
+      }
 
-      int result = 2 * w + (2 * (field.size()-2) );
+      log("Process: " + row + " | " + index + " D (w|h): " + d.width + " | " + d.height);
+
+      for (int i = 0; i < rows.size(); i++) {
+
+        String rowData = getScopedData(index, d.width, rows.get(i));
+
+        if (rowData.length() < 2) {
+          return;
+        }
+
+        log(rowData + " row " + (i+1) + " out of " + rows.size());
+
+        final String data = rowData.charAt(0) + "" + rowData.charAt(rowData.length() - 1);
+        if (i == 0 || i == rows.size() - 1) {
+          if (rowData.contains("x")) {
+            if (i == rows.size() - 1) {
+              process(new Dimension(d.height - 1, d.width), row, index, field, rc);
+            } //else if (rowData.charAt(rowData.length() - 1) == 'x') {
+              process(new Dimension(d.height, d.width - 1), row, index, field, rc);
+            //}
+            return;
+          }
+        }
+        else {
+          
+          if (data.contains("x")) {
+            log(" edge fail");
+            process(new Dimension(d.height, d.width - 1), row, index, field, rc);
+            if(i < rows.size()-1 && i > 1){
+              final String previous = getScopedData(index, d.width, rows.get(i-1));
+              if(!previous.contains("x")){
+                int result = 2 * (d.width - 1) + 2 * (i-1);
+                log("Result: " + result);
+                rc.setResult(result);
+              }
+              //  process(new Dimension(d.height-1, d.width), row, index, field, rc);
+            }
+            
+            return;
+          }
+        }
+      }
+
+      int result = 2 * (d.width - 1) + 2 * (d.height - 1);
       log("Result: " + result);
       rc.setResult(result);
-
     }
 
     public String solve(final Scanner in) {
 
       final String[] parameters = in.nextLine().split(" ");
-      //final Dimension dimensions = new Dimension(Integer.parseInt(parameters[0]), Integer.parseInt(parameters[1]));
+      final Dimension dimensions = new Dimension(Integer.parseInt(parameters[0]), Integer.parseInt(parameters[1]));
 
       final List<String> field = new ArrayList<>();
-      for (int i = Integer.parseInt(parameters[0]); i > 0; --i) {
+      for (int i = dimensions.height; i > 0; --i) {
         final String row = in.nextLine();
         log(row);
         field.add(row);
       }
 
       final ResultContainer rc = new ResultContainer();
-      process(0, Integer.parseInt(parameters[1]), field, rc);
+      for (int i = 0; i < field.size() - 1; ++i) {
+        final String row = field.get(i);
+        for (int j = 0; j < row.length() - 1; ++j) {
+          process(new Dimension(dimensions.height - i, dimensions.width - j), i, j, field, rc);
+        }
+      }
 
       return rc.result < 4 ? "impossible" : String.valueOf(rc.result);
     }
