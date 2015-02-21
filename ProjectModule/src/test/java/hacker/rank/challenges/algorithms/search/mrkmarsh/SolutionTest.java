@@ -1,4 +1,4 @@
-package attempt.hacker.rank.challenges.algorithms.search.mrkmarsh;
+package hacker.rank.challenges.algorithms.search.mrkmarsh;
 
 import java.util.Scanner;
 import junit.framework.TestCase;

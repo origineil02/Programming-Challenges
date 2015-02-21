@@ -1,4 +1,4 @@
-package attempt.hacker.rank.challenges.algorithms.search.mrkmarsh;
+package hacker.rank.challenges.algorithms.search.mrkmarsh;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,42 +31,60 @@ public class Solution {
     
     private String getData(Dimension d, int row, int index, List<String> field){
         final String rowData = field.get(row);
-        return rowData.substring(index).substring(0, d.width + 1);
+        
+        String tmp = "";
+        for (int i = index, j=0; j <= d.width; j++) {
+          {
+            tmp += rowData.charAt(i+j);
+          }
+        }
+        return tmp;
+    }
+    private void calculate(final Dimension d, final ResultContainer rc){
+      int result = 2 * (d.width + 1) + 2 * (d.height+1) - 4;
+      log("Result: " + result);
+      rc.setResult(result);
     }
     
     private void process(Dimension d, int row, int index, List<String> field, final ResultContainer rc) {
 
-      //log("-begin-");
+      log(row + " | " + index);
       
-      if(d.width > field.get(row).length()-1){ return; }
-      if(d.height > field.size()) { return; }
+      if(d.width + index > field.get(row).length()-1){ return; }
+      if(d.height + row >= field.size()) { return; }
       
       final String first = getData(d, row, index, field);
+      
       log(first);
       
       if(!first.contains("x")){
         process(new Dimension(d.height, d.width+1), row, index, field, rc);
       }
-         
-      log("----");
-      for (int i = 1; i < d.height; i++) {
-        final String next = getData(d, row+i, index, field);
-        log(next);
-        
-        if(next.contains("x") && i == d.height){
-          if(next.charAt(0) != 'x' && next.charAt(next.length()-1) != 'x'){
-            process(new Dimension(d.height+1, d.width), row, index, field, rc);
-          }
-          return;
-        }else if(d.height < field.size()){
-          process(new Dimension(d.height+1, d.width), row, index, field, rc);
-        }
+      else{
+        return;
       }
+         
+      log("--body--");
+       
+      String next = getData(d, row+d.height, index, field);
+      log(next);
+             
+       int count = 1;
+        while(next.charAt(0) != 'x' && next.charAt(next.length()-1) != 'x'){
+          if(row+d.height+count == field.size()){
+            break;
+          }
+          
+          if(!next.contains("x")){calculate(new Dimension(d.height+count-1, d.width), rc);}
+          
+          next = getData(d, row+d.height+(count++), index, field);
+          log(next);
+        }
+        
+        if(next.contains("x")){return;}
       
-      log("----");
-      int result = 2 * (d.width - 1) + 2 * (d.height - 1);
-      log("Result: " + result);
-      rc.setResult(result);
+      log("--end--");
+      calculate(new Dimension(d.height+count-1, d.width), rc);
     }
 
     public String solve(final Scanner in) {
@@ -93,7 +111,7 @@ public class Solution {
     }
 
     private void log(String msg) {
-      System.out.println(msg);
+      //System.out.println(msg);
     }
 
     @Override
