@@ -1,10 +1,8 @@
 import java.util.Scanner;
-import static junit.framework.Assert.assertEquals;
-import org.junit.Test;
+import junit.framework.TestCase;
 
-public class SolutionTest {
+public class SolutionTest extends TestCase{
 
-  @Test
   public void testSample() {
 
     final String input = "";
