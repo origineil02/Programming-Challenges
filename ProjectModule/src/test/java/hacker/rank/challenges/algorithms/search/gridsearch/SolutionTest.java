@@ -1,5 +1,7 @@
-package attempt.hacker.rank.challenges.algorithms.search.gridsearch;
+package hacker.rank.challenges.algorithms.search.gridsearch;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;
 import junit.framework.TestCase;
@@ -114,4 +116,21 @@ public class SolutionTest extends TestCase {
     assertEquals("NO\nYES", new Solution.GridSearch().solve(new Scanner(input)));
   }
 
+  public void testCustom(){
+    
+    final Map<String, String> inputs = new HashMap<>();
+    
+    inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n1 2\n4 5", "YES");
+    inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n5 6\n8 9", "YES");
+    inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n1 1\n6\n9", "YES");
+
+    inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n6 0\n9 0", "NO");  
+    inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n8 0\n0 0", "NO");
+    inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n1 2\n5 6", "NO");
+    inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n2 3\n4 5", "NO");
+    
+    for (Map.Entry<String, String> entry : inputs.entrySet()) {
+      assertEquals(entry.getValue(), new Solution.GridSearch().solve(new Scanner(entry.getKey())));      
+    }
+  }
 }
