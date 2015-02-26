@@ -1,4 +1,4 @@
-package attempt.hacker.rank.challenges.algorithms.search.gridsearch;
+package hacker.rank.challenges.algorithms.search.gridsearch;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -68,7 +68,7 @@ public class Solution {
         final Container pattern = new Container(in);
 
         boolean flag = false;
-        for (int i = 0; i < container.width; i++) {
+        for (int i = 0; i < container.height; i++) {
           for (Integer index : getIndices(container.grid, pattern.grid.get(0).charAt(0), i)) {
             flag |= isAMatch(container.grid, pattern.grid, index, i);
           }

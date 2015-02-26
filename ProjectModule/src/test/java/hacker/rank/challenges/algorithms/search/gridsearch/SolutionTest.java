@@ -1,4 +1,4 @@
-package attempt.hacker.rank.challenges.algorithms.search.gridsearch;
+package hacker.rank.challenges.algorithms.search.gridsearch;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -129,7 +129,6 @@ public class SolutionTest extends TestCase {
     inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n1 2\n5 6", "NO");
     inputs.put("1\n3 3\n1 2 3\n4 5 6\n7 8 9\n2 2\n2 3\n4 5", "NO");
     
-//inputs.put("", "");
     for (Map.Entry<String, String> entry : inputs.entrySet()) {
       assertEquals(entry.getValue(), new Solution.GridSearch().solve(new Scanner(entry.getKey())));      
     }
