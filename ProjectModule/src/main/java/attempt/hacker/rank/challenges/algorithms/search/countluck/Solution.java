@@ -57,19 +57,28 @@ public class Solution {
     private class Trail {
 
       final Coordinate c;
-      final Trail from;
-      final List<Trail> paths = new ArrayList<>();
-
+      final Integer from;
+      final List<Trail> available = new ArrayList<>();
+      final List<Trail> explored = new ArrayList<>(); 
+      
       Trail(Coordinate c) {
         this.c = c;
-        from = null;
+        from = 0;
       }
 
-      Trail(Coordinate c, Trail f) {
-        this.c = c;
-        this.from = f;
+      public Trail from(){
+        return explored.get(explored.size()-1);
       }
       
+      public boolean isSolvable(Container container){
+        
+        for (Trail trail : available) {
+          if('*' == container.charAt(trail.c)){
+            return true;
+          }
+        }
+        return false;
+      }
       public String toString(){return c + " | " + from;}
     }
 
@@ -96,9 +105,6 @@ public class Solution {
         }
       }
 
-//      public void waveWand(){
-//        count++;
-//      }
       public char charAt(Coordinate c) {
         return grid.get(c.row).charAt(c.column);
       }
@@ -107,9 +113,9 @@ public class Solution {
     private enum Move {
 
       UP(-1, 0),
-      LEFT(0, -1),
       RIGHT(0, 1),
-      DOWN(1, 0);
+      DOWN(1, 0),
+      LEFT(0, -1);
 
       private int rowOffset;
       private int columnOffset;
@@ -131,27 +137,44 @@ public class Solution {
       return n;
     }
 
-    private Trail traverse(Trail t, Container container) {
+    private void log(String msg){
+      //System.out.println(msg);
+    }
+    
+    private Trail traverse(Trail t, Trail f, Container container) {
 
-      if (container.charAt(t.c) == '*') {
-        return t;
+      log("@" + t.c + " via " + (null != f ? f.c : "n/a"));
+      
+      if(!t.available.isEmpty())
+      {
+          t.available.remove(f);
+          t.explored.add(f);
       }
-
+      else{
       for (Move m : Move.values()) {
         Coordinate n = next(t.c, m, container);
-        if (null != n && !n.equals(t.from.c)) {
-          t.paths.add(new Trail(n, t));
+        if (null != n){
+          
+          if(null != f && f.c.equals(n)){
+            t.explored.add(f);
+            //f.available.remove(f);
+          }
+          else {
+            t.available.add(new Trail(n));
+          }
         }
       }
 
-      if (!t.paths.isEmpty()) {
-        return traverse(t.paths.get(0), container);
+      if(t.isSolvable(container)){
+        return t;
+      }
+      }
+      if (!t.available.isEmpty()) {
+        return traverse(t.available.get(0), t, container);
       }
       else {
-        System.out.println("rewind");
+        return traverse(f, t, container);
       }
-
-      return null;
     }
 
     public String solve(final Scanner in) {
@@ -161,14 +184,21 @@ public class Solution {
       while (0 < testCases--) {
         final Container c = new Container(in);
         int expected = Integer.valueOf(in.nextLine());
-        Trail t = traverse(new Trail(c.location, new Trail(c.location)), c);
+        Trail t = traverse(new Trail(c.location), null, c);
 
         int count = 0;
-        while (t != null) {
-          if (t.paths.size() > 1) {
+        while (true) {
+          if (t.available.size() > 1 || t.explored.size() > (t.c.equals(c.location) ? 0 : 1)) {
             count++;
           }
-          t = t.from;
+          
+          if(t.c.equals(c.location)){
+            break;
+          }
+          
+          t = t.from();
+          //t.available.remove(f);
+          //f.explored.add(f);
         }
         sb.append(count == expected ? "Impressed" : "Oops!").append("\n");
       }
