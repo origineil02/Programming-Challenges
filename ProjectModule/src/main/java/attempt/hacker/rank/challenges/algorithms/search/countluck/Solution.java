@@ -27,6 +27,7 @@ public class Solution {
       public String toString(){
         return row + " : " + column; 
       }
+      
       @Override
       public int hashCode() {
         int hash = 3;
@@ -79,6 +80,7 @@ public class Solution {
         }
         return false;
       }
+      
       public String toString(){return c + " | " + from;}
     }
 
@@ -145,30 +147,30 @@ public class Solution {
 
       log("@" + t.c + " via " + (null != f ? f.c : "n/a"));
       
-      if(!t.available.isEmpty())
-      {
+      if(!t.available.isEmpty()) {
           t.available.remove(f);
           t.explored.add(f);
       }
       else{
-      for (Move m : Move.values()) {
-        Coordinate n = next(t.c, m, container);
-        if (null != n){
+        for (Move m : Move.values()) {
+          final Coordinate n = next(t.c, m, container);
+          if (null != n){
           
-          if(null != f && f.c.equals(n)){
-            t.explored.add(f);
+            if(null != f && f.c.equals(n)){
+              t.explored.add(f);
             //f.available.remove(f);
-          }
-          else {
-            t.available.add(new Trail(n));
+            }
+            else {
+              t.available.add(new Trail(n));
+            }
           }
         }
-      }
 
-      if(t.isSolvable(container)){
-        return t;
+        if(t.isSolvable(container)){
+          return t;
+        }
       }
-      }
+      
       if (!t.available.isEmpty()) {
         return traverse(t.available.get(0), t, container);
       }
@@ -197,8 +199,6 @@ public class Solution {
           }
           
           t = t.from();
-          //t.available.remove(f);
-          //f.explored.add(f);
         }
         sb.append(count == expected ? "Impressed" : "Oops!").append("\n");
       }
