@@ -8,25 +8,37 @@ public class Solution {
 
     final private int mod = ((Double)(Math.pow(10, 9) + 7)).intValue();
     
-    public String solve(final Scanner in) {
-      
-      final StringBuilder sb = new StringBuilder();
-      int testCases = in.nextInt();
-      while(0 < testCases--){
-        int strength = in.nextInt();
-        
-        for(int i = 1; ;i++){
+    private long bruteForce(long strength){
+      for(long i = 1; ;i++){
           
+        System.out.println(i + " " + strength + " | " + 42*i);
           if(i % 2 == 0){
             if(i % 42 != 0){
               strength--;
             }
           }
           if(strength == 0){
-            sb.append(i % mod).append("\n");
-            break;
+            return i % mod;
           }
+      }
+    }
+    
+    private long solution(long strength){
+      long pool = 2 * strength;
+        int count = 0;
+        for(long i = pool; i >= 42; i -=42){
+          count++;
         }
+       return (pool + 2*count) % mod;
+    }
+    public String solve(final Scanner in) {
+      
+      final StringBuilder sb = new StringBuilder();
+      int testCases = Integer.parseInt(in.nextLine());
+      while(0 < testCases--){
+        long strength = Long.parseLong(in.nextLine());
+        
+        sb.append( bruteForce(strength)).append(" vs ").append(solution(strength)).append("\n");
       }
       return sb.toString().trim();
     }

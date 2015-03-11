@@ -11,4 +11,16 @@ public class SolutionTest extends TestCase{
     assertEquals("6\n8", new Solution.WetShark().solve(new Scanner(input)));
   }
   
+  public void testBoundary() {
+
+    long v = ((Double)(Math.pow(10, 3))).longValue();
+    final String input = "1\n" + v;
+    assertEquals("1", new Solution.WetShark().solve(new Scanner(input)));
+  }
+  
+  public void testx() {
+
+    final String input = "1\n1000";
+    assertEquals("1", new Solution.WetShark().solve(new Scanner(input)));
+  }
 }
