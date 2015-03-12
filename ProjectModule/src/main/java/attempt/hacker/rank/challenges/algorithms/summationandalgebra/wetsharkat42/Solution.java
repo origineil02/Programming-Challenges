@@ -26,11 +26,12 @@ public class Solution {
     private long solution(long strength){
       long pool = 2 * strength;
         int count = 0;
-        for(long i = pool; i >= 42; i -=42){
+        for(long i = 1; i * 42 <= pool; i++){
           count++;
         }
        return (pool + 2*count) % mod;
     }
+    
     public String solve(final Scanner in) {
       
       final StringBuilder sb = new StringBuilder();
