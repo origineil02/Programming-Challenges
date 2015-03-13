@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.intrototutorialchallenges;
+package hacker.rank.challenges.algorithms.sorting.intrototutorialchallenges;
 
 import java.util.Scanner;
 
