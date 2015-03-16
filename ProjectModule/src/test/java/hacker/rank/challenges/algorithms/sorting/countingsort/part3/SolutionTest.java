@@ -1,12 +1,10 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.countingsort.part3;
+package hacker.rank.challenges.algorithms.sorting.countingsort.part3;
 
 import java.util.Scanner;
-import static junit.framework.Assert.assertEquals;
-import org.junit.Test;
+import junit.framework.TestCase;
 
-public class SolutionTest {
+public class SolutionTest extends TestCase{
 
-  @Test
   public void testSample() {
     final String input = "10\n"
             + "4 that\n"
@@ -21,6 +19,6 @@ public class SolutionTest {
             + "4 the";
 
     final String output = "1 3 5 6 9 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10";
-    assertEquals(output, new hacker.rank.challenges.algorithms.arraysandsorting.countingsort.part3.Solution.CountingSortPart3().solve(new Scanner(input)));
+    assertEquals(output, new hacker.rank.challenges.algorithms.sorting.countingsort.part3.Solution.CountingSortPart3().solve(new Scanner(input)));
   }
 }
