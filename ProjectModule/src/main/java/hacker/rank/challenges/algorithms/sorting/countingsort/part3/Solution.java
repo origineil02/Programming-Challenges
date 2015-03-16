@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.countingsort.part3;
+package hacker.rank.challenges.algorithms.sorting.countingsort.part3;
 
 import java.util.Map;
 import java.util.Scanner;
