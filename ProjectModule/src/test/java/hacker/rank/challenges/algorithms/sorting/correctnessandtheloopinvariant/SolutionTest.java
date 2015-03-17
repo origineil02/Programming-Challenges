@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.correctnessandtheloopinvariant;
+package hacker.rank.challenges.algorithms.sorting.correctnessandtheloopinvariant;
 
 import java.util.Scanner;
 import static junit.framework.Assert.assertEquals;

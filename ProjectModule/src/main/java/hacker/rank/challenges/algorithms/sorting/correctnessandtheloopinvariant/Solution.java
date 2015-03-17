@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.correctnessandtheloopinvariant;
+package hacker.rank.challenges.algorithms.sorting.correctnessandtheloopinvariant;
 
 import java.util.Arrays;
 import java.util.Scanner;
