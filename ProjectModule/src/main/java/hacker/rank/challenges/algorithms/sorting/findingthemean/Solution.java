@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.findingthemean;
+package hacker.rank.challenges.algorithms.sorting.findingthemean;
 
 import java.util.ArrayList;
 import java.util.Collections;
