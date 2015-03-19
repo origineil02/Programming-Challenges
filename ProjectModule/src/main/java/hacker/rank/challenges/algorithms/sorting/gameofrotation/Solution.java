@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.gameofrotation;
+package hacker.rank.challenges.algorithms.sorting.gameofrotation;
 
 import java.util.HashMap;
 import java.util.LinkedList;
