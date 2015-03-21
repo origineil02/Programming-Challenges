@@ -1,12 +1,10 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.insertionsort.part2;
+package hacker.rank.challenges.algorithms.sorting.insertionsort.part2;
 
 import java.util.Scanner;
-import static junit.framework.Assert.assertEquals;
-import org.junit.Test;
+import junit.framework.TestCase;
 
-public class SolutionTest {
+public class SolutionTest extends TestCase {
 
-  @Test
   public void testSample() {
 
     final String input = "6\n1 4 3 5 6 2";
