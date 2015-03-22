@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.makeitanagram;
+package hacker.rank.challenges.algorithms.sorting.makeitanagram;
 
 import java.util.Arrays;
 import java.util.Scanner;
