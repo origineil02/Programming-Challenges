@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.quicksort.partition;
+package hacker.rank.challenges.algorithms.sorting.quicksort.partition;
 
 import java.util.ArrayList;
 import java.util.HashMap;
