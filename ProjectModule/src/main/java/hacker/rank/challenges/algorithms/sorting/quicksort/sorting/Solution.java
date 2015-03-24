@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.quicksort.sorting;
+package hacker.rank.challenges.algorithms.sorting.quicksort.sorting;
 
 import java.util.ArrayList;
 import java.util.HashMap;
