@@ -1,12 +1,9 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.runningtimeofalgorithms;
+package hacker.rank.challenges.algorithms.sorting.runningtimeofalgorithms;
 
 import java.util.Scanner;
-import static junit.framework.Assert.assertEquals;
-import org.junit.Test;
+import junit.framework.TestCase;
+public class SolutionTest extends TestCase{
 
-public class SolutionTest {
-
-  @Test
   public void testSample() {
 
     final String input = "5\n2 1 3 1 2";
