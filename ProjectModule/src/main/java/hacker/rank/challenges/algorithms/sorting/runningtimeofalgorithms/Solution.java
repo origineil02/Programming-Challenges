@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.runningtimeofalgorithms;
+package hacker.rank.challenges.algorithms.sorting.runningtimeofalgorithms;
 
 import java.util.Scanner;
 
