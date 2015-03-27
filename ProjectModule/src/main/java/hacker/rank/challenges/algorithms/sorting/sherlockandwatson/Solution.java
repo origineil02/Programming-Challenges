@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.sherlockandwatson;
+package hacker.rank.challenges.algorithms.sorting.sherlockandwatson;
 
 import java.util.LinkedList;
 import java.util.Scanner;
