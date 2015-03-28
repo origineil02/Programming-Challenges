@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.sherlockandpairs;
+package hacker.rank.challenges.algorithms.sorting.sherlockandpairs;
 
 import java.math.BigInteger;
 import java.util.HashMap;
