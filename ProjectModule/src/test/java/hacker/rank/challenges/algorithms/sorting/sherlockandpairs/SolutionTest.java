@@ -1,18 +1,14 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.sherlockandpairs;
-
+package hacker.rank.challenges.algorithms.sorting.sherlockandpairs;
 import java.io.File;
 import java.util.Scanner;
-import static junit.framework.Assert.assertEquals;
-import org.junit.Test;
+import junit.framework.TestCase;
 
-public class SolutionTest {
+public class SolutionTest extends TestCase {
 
-  @Test
   public void testSample() {
     assertEquals("0\n2\n", new Solution.SherlockAndPairs().solve(new Scanner("2\n3\n3 2 1\n3\n1 1 2")));
   }
 
-  @Test
   public void testCase2() throws Exception {
 
     final File input = new File("SherlockAndPairsTestCase2.txt");
