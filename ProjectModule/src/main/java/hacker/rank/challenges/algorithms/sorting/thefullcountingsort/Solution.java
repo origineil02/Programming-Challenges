@@ -1,4 +1,4 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.thefullcountingsort;
+package hacker.rank.challenges.algorithms.sorting.thefullcountingsort;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,12 +1,10 @@
-package hacker.rank.challenges.algorithms.arraysandsorting.thefullcountingsort;
+package hacker.rank.challenges.algorithms.sorting.thefullcountingsort;
 
 import java.util.Scanner;
-import static junit.framework.Assert.assertEquals;
-import org.junit.Test;
+import junit.framework.TestCase;
 
-public class SolutionTest {
+public class SolutionTest extends TestCase{
 
-  @Test
   public void testSample() {
     final String input = "20\n"
             + "0 ab\n"
@@ -36,7 +34,6 @@ public class SolutionTest {
 
   }
 
-  @Test
   public void test() {
     final String input = "1000\n"
             + "24 oz\n"
